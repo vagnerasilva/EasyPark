@@ -1,0 +1,65 @@
+/* Empty. Add your own CSS if you like */
+
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+.scroll {
+    height: 100%;
+}
+ 
+#map {
+    width: 100%;
+    height: 80%;
+}
+
+body {
+	font-family: 'Lato', sans-serif !important; 
+	background-color: rgb(253, 253, 252);
+}
+
+
+.container {
+	padding: 5%;
+
+}
+
+h3 {
+	text-align: center;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	color: #303030 !important; 
+}
+
+h4 {
+	text-align: center;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	color: #303030 !important; 
+}
+
+
+
+#direcoes {
+	z-index: 4;
+	width: 96%;
+	left: 2%;
+	position: absolute;
+	bottom: 2%;
+}
+
+#smile-mais {
+	width: 50%;
+	position:  relative;
+	left: 25%;
+	padding-top: 10%;
+}
+
+#rota {
+	position: absolute;
+	height: 40%;
+	bottom: 0%;
+}
+
+#sucesso {
+	width: 90%;
+	left: 5%;
+}

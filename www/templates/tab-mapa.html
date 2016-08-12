@@ -1,0 +1,46 @@
+
+  <ion-pane>
+    <ion-header-bar class="bar-stable">
+      <h1 class="title">Ionic Maps</h1>
+    </ion-header-bar>
+
+<ion-view view-title="Mapa">
+  <ion-content>
+  <!-- divão blocão tudo -->
+  <div ng-model="mapa" >
+
+  <!-- primeiro bloco -->
+  	<div class="container" ng-model="search" id="search" ng-show=" mapa == 'search' ">
+  		<form id="contact-form" role="form">
+	        <label class="item item-input item-stacked-label">
+	          <span class="input-label">Qual é o seu destino?</span>
+	          <input type="text" id="address" placeholder="Endereço" ng-model="search.endereco">
+	        </label>
+          <a class="button button-block button-energized" ng-click="newSearch(); mapa = 'results' ">Procurar</a>
+	    </form>
+    </div>
+
+  <!-- segundo bloco -->
+    <div class="container" ng-model="results" ng-show=" mapa == 'results' ">
+      
+      <div id="title">
+      <h4>Selecione onde você <br>quer estacionar tranquilo.</h4>
+      </div>
+      
+      <a class="button button-block button-energized" id="direcoes" ng-click="newRota(); mapa = 'way' ">Direções até lá</a>
+
+    </div>
+
+  <!-- terceiro bloco -->
+    <div ng-model="way" ng-show=" mapa == 'way' " id="rota">
+      <div id="trajeto-texto"></div>
+    </div>
+
+  </div> <!-- fecha o divão blocão tudo -->
+
+  <div id="map" data-tap-disabled="true"> </div>
+
+  </ion-content>
+</ion-view>
+
+</ion-pane>

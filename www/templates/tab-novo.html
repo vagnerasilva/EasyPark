@@ -1,0 +1,90 @@
+<ion-view view-title="Novo">
+  <ion-content>
+
+  	<!-- divão -->
+  	<div class="container"  ng-init=" novo = 'containerUm' ">
+  	
+  	<!-- containerUm -->
+  	<div ng-model="containerUm" ng-show="novo == 'containerUm'">
+  		<img src="../img/smile-mais.png" id="smile-mais">
+	  	<h3>Quero solicitar <br>um totem!</h3>  
+	    <br>
+	    <a class="button button-block button-energized" ng-click="novo = 'containerTres'">Sugerir</a>
+	    <a class="button button-block button-energized" ng-click="novo = 'containerDois'">Aquirir</a>
+    </div> <!-- fecha containerUm -->
+    
+    <!-- containerDois -->
+    <div ng-model="containerDois" ng-show=" novo == 'containerDois' ">
+	    <form id="contact-form" ng-submit="novo = 'containerQuatro'"  role="form">
+	      
+	      <div class="list">
+	        <label class="item item-input item-stacked-label">
+	          <span class="input-label">Nome</span>
+	          <input type="text" id="address" placeholder="Nome" ng-model="newTotem.nome">
+	        </label>
+
+	        <label class="item item-input item-stacked-label">
+	          <span class="input-label">E-mail</span>
+	          <input type="text" id="address" placeholder="Email" ng-model="newTotem.email">
+	        </label>
+
+	        <label class="item item-input item-stacked-label">
+		        <span class="input-label">Endereço</span>
+		        <input type="text" id="address" placeholder="Endereço" ng-model="newTotem.endereco">
+	        </label>
+	      </div> <!-- fecha a list/input dos dados -->
+
+	      <ul class="list">
+		  	<li class="item item-toggle">
+			     É um ponto comercial.
+			     <label class="toggle toggle-energized">
+			       <input type="checkbox">
+			       <div class="track">
+			         <div class="handle"></div>
+			       </div>
+			     </label>
+			  </li>
+			</ul>
+	      
+	      <input type = "submit" class="button button-block button-energized" value= "Solicitar">
+	    </form>
+    </div> <!-- fecha containerDois-->
+
+	<!-- containerTres -->
+    <div ng-model="containerTres" ng-show="novo == 'containerTres'">
+	    <form id="contact-form" ng-submit="novo = 'containerCinco'"  role="form">
+	      
+	      <div class="list">
+	        <label class="item item-input item-stacked-label">
+	          <span class="input-label">Nome do Local</span>
+	          <input type="text" id="address" placeholder="Ex: Shopping Vila Olímpia" ng-model="newTotem.nome">
+	        </label>
+
+	        <label class="item item-input item-stacked-label">
+		        <span class="input-label">Endereço</span>
+		        <input type="text" id="address" placeholder="Ex: Rua Olimpíadas, 345" ng-model="newTotem.endereco">
+	        </label>
+	      </div> <!-- fecha a list/input dos dados -->
+	      
+	      <input type = "submit" class="button button-block button-energized" value= "Sugerir">
+	    </form>
+    </div> <!-- fecha containerTres-->
+
+    <!-- containerQuatro -->
+    <div ng-model="containerQuatro" id="sucesso" ng-show="novo == 'containerQuatro'">
+    	<img src="../img/smile-sent.png" id="smile-mais">
+	    <h4>YAAAAAY! <br>Logo você terá um totem.</h4>
+	    <h4>Nossa equipe vai entrar em contato com você para combinar os detalhes.</h4>
+    </div> <!-- fecha containerQuatro-->
+
+    <!-- containerCinco -->
+    <div ng-model="containerCinco" id="sucesso" ng-show="novo == 'containerCinco'">
+	    <img src="../img/smile-sent.png" id="smile-mais">
+	    <h4>Muuuito obrigado pela sugestão!</h4>
+	    <h4>Vamos entrar em contato com o local.</h4>
+    </div> <!-- fecha containerCinco-->
+
+    </div> <!-- fecha divão -->
+    
+  </ion-content>
+</ion-view>
